@@ -22,6 +22,9 @@ CONFIG_UART_CONSOLE=y
 # Pinmux Driver
 CONFIG_PINMUX=y
 
+# GPIO Controller
+CONFIG_GPIO=y
+
 # Clock configuration
 CONFIG_CLOCK_CONTROL=y
 # SYSCLK selection
