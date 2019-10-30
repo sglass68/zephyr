@@ -1,0 +1,11 @@
+# Kconfig.backends - Shell badckends configuration options
+
+#
+# Copyright 2019 Google LLC
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config CROS_EC
+	bool "Support Chrome OS EC"
+	default y

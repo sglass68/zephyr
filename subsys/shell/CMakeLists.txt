@@ -1,6 +1,11 @@
 # SPDX-License-Identifier: Apache-2.0
 
 add_subdirectory(modules)
+if(SHELL_CROS_EC)
+add_subdirectory(cros_ec)
+endif()
+
+add_subdirectory_ifdef(CONFIG_SHELL_CROS_EC cros_ec)
 
 zephyr_sources_ifdef(
   CONFIG_SHELL

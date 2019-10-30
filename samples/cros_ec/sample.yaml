@@ -1,0 +1,14 @@
+sample:
+  description: Chrome OS EC sample
+    application
+  name: cros_ec
+common:
+    tags: ec
+    harness: console
+    harness_config:
+      type: one_line
+      regex:
+        - "Hello World! (.*)"
+tests:
+  sample.cros_ec:
+    tags: introduction

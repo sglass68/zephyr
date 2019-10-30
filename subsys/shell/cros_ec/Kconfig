@@ -1,0 +1,3 @@
+config CMD_TIMERINFO
+	bool "timerinfo - show information about timer"
+	default y
