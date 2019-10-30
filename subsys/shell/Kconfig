@@ -104,6 +104,16 @@ config SHELL_HISTORY
 	  Enable commands history. History can be accessed using up and down
 	  arrows.
 
+config SHELL_CROS_EC
+	bool "Enable Chrome OS EC commands"
+	default y
+
+if SHELL_CROS_EC
+
+source "subsys/shell/cros_ec/Kconfig"
+
+endif
+
 if SHELL_HISTORY
 
 config SHELL_HISTORY_BUFFER
