@@ -49,8 +49,15 @@ int cprints(enum console_channel channel, const char *format, ...);
  */
 void cflush(void);
 
+/* Converts from the EC's command declaration to a Zephyr shell command */
 #define DECLARE_SAFE_CONSOLE_COMMAND(NAME, ROUTINE, ARGDESC, HELP)	\
-	SHELL_CMD_REGISTER(NAME, NULL, HELP, ROUTINE)
+	static int stub_ ## ROUTINE(const struct shell *shell, size_t argc, \
+				    char **argv) \
+	{ \
+		global_shell = shell; \
+		return ROUTINE(argc, argv); \
+	} \
+	SHELL_CMD_REGISTER(NAME, NULL, HELP, stub_ ## ROUTINE)
 
 /* Microsecond timestamp. */
 typedef union {

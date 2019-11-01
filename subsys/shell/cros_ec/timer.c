@@ -374,9 +374,8 @@ DECLARE_SAFE_CONSOLE_COMMAND(gettime, command_get_time,
 
 #ifdef CONFIG_CMD_TIMERINFO
 /* Should be const struct shell *, but no warning :-( */
-int command_timer_info(const struct shell *shell, size_t argc, char **argv)
+int command_timer_info(int argc, char **argv)
 {
-	global_shell = shell;
 	timer_print_info();
 
 	return EC_SUCCESS;
