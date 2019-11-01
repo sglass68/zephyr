@@ -69,4 +69,6 @@ timestamp_t get_time(void);
 /* Returns the timestamp of the next programed event */
 uint32_t __hw_clock_event_get(void);
 
+extern const struct shell *global_shell;
+
 #endif /* ZEPHYR_INCLUDE_CROS_EC_H */

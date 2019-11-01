@@ -1,3 +1,7 @@
 config CMD_TIMERINFO
 	bool "timerinfo - show information about timer"
 	default y
+
+config CMD_GPIO
+	bool "gpio - allow seting / getting GPIO info"
+	default y

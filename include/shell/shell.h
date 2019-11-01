@@ -332,7 +332,7 @@ struct shell_static_entry {
 		.help  = (_expr) ? (const char *)_help : NULL, \
 		.subcmd = (const struct shell_cmd_entry *)((_expr) ? \
 				_subcmd : NULL), \
-		.handler = (shell_cmd_handler)((_expr) ? _handler : NULL), \
+		.handler = ((_expr) ? _handler : NULL), \
 		.args = { .mandatory = _mand, .optional = _opt} \
 	}
 
@@ -751,6 +751,9 @@ int shell_stop(const struct shell *shell);
  */
 void shell_fprintf(const struct shell *shell, enum shell_vt100_color color,
 		   const char *fmt, ...);
+
+void shell_vfprintf(const struct shell *shell, enum shell_vt100_color color,
+		   const char *fmt, va_list args);
 
 /**
  * @brief Print data in hexadecimal format.

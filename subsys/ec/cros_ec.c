@@ -12,6 +12,8 @@
 
 #include <cros_ec/common.h>
 
+const struct shell *global_shell;
+
 timestamp_t get_time(void)
 {
 	timestamp_t t;
@@ -31,8 +33,9 @@ int cprintf(enum console_channel channel, const char *format, ...)
 	va_list ap;
 
 	va_start(ap, format);
-	vprintk(format, ap);
+	shell_vfprintf(global_shell, SHELL_NORMAL, format, ap);
 	va_end(ap);
+
 
 	return 0;
 }
