@@ -7,4 +7,4 @@
 
 config BOARD_GOOGLE_KUKUI
 	bool "Google Kukui EC"
-	depends on SOC_STM32F091XC
+	depends on SOC_STM32F098XX
