@@ -1,19 +1,26 @@
 # Copyright (c) 2020 Nuvoton Technology Corporation.
 # SPDX-License-Identifier: Apache-2.0
 
-description: Nuvoton, NPCX-I2C node
+description: Nuvoton, NPCX-I2C port pads node
 
-compatible: "nuvoton,npcx-i2c"
+compatible: "nuvoton,npcx-i2c-port"
 
-include: [i2c-controller.yaml]
+include: [base.yaml]
 
 properties:
-    reg:
-        required: true
-    clocks:
-        required: true
     label:
         required: true
+
+    port:
+        type: int
+        required: true
+        description: index of i2c port
+
+    controller:
+        type: phandle
+        required: true
+        description: i2c controller to handle signals from port pads
+
     pinctrl:
         type: phandles
         required: true
