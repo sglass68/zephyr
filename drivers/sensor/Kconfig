@@ -187,4 +187,6 @@ source "drivers/sensor/nxp_kinetis_temp/Kconfig"
 
 source "drivers/sensor/wsen_itds/Kconfig"
 
+source "drivers/sensor/nuvoton_tach_npcx/Kconfig"
+
 endif # SENSOR

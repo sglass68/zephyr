@@ -49,6 +49,9 @@ CONFIG_ESPI=y
 # I2C Driver
 CONFIG_I2C=y
 
+# Sensor (Tachometer) Driver
+CONFIG_SENSOR=y
+
 # Console Driver
 CONFIG_CONSOLE=y
 CONFIG_UART_CONSOLE=y

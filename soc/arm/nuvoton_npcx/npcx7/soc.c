@@ -137,3 +137,26 @@ NPCX_REG_OFFSET_CHECK(smb_fifo_reg, SMBT_OUT, 0x00f);
 NPCX_REG_OFFSET_CHECK(smb_fifo_reg, SMBCST2, 0x018);
 NPCX_REG_OFFSET_CHECK(smb_fifo_reg, SMBTXF_STS, 0x01a);
 NPCX_REG_OFFSET_CHECK(smb_fifo_reg, SMBRXF_CTL, 0x01e);
+<<<<<<< HEAD
+=======
+
+/* ITIM register structure check */
+NPCX_REG_SIZE_CHECK(itim32_reg, 0x00c);
+NPCX_REG_OFFSET_CHECK(itim32_reg, ITPRE, 0x001);
+NPCX_REG_OFFSET_CHECK(itim32_reg, ITCTS, 0x004);
+NPCX_REG_OFFSET_CHECK(itim32_reg, ITCNT32, 0x008);
+
+NPCX_REG_SIZE_CHECK(itim64_reg, 0x010);
+NPCX_REG_OFFSET_CHECK(itim64_reg, ITPRE, 0x001);
+NPCX_REG_OFFSET_CHECK(itim64_reg, ITCTS, 0x004);
+NPCX_REG_OFFSET_CHECK(itim64_reg, ITCNT64L, 0x008);
+NPCX_REG_OFFSET_CHECK(itim64_reg, ITCNT64H, 0x00c);
+
+/* TACH register structure check */
+NPCX_REG_SIZE_CHECK(tach_reg, 0x01e);
+NPCX_REG_OFFSET_CHECK(tach_reg, TPRSC, 0x008);
+NPCX_REG_OFFSET_CHECK(tach_reg, TECLR, 0x010);
+NPCX_REG_OFFSET_CHECK(tach_reg, TCPA, 0x014);
+NPCX_REG_OFFSET_CHECK(tach_reg, TCPCFG, 0x018);
+NPCX_REG_OFFSET_CHECK(tach_reg, TCFG, 0x01c);
+>>>>>>> b994907f5e... driver: sensor: add tachometer sensor support in npcx7 series.
